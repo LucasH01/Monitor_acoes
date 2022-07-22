@@ -1,6 +1,4 @@
-#from cProfile import label
 import investpy as ip
-#from matplotlib.figure import Figure
 from pytz import country_names
 import streamlit as st
 from datetime import datetime, timedelta
@@ -35,17 +33,12 @@ def plotCandleStick(df, acao='ticket'):
      
     return fig
 
-
-
-
 # Captando as ações
 pais_br = ['Brasil', 'Estados Unidos']
 paises = ['brazil', 'united states']
 intervalo = ['Daily', 'Weekly', 'Mounthy']
 intervalo_br = ['Dia', 'Semana', 'Mês']
 titulo = st.header('Gráfio de açoes')
-
-#print(acoes)
 
 # Consulta(query) das Açoes
 dt_inicio = datetime.today() - timedelta(days=30)
